@@ -1,5 +1,9 @@
 import time
 from utils import *
+import locale
+
+# Set Language
+locale.setlocale(locale.LC_TIME, 'uz_UZ')
 
 
 @bot.message_handler(commands=['start'])

@@ -24,7 +24,7 @@ admin = Admin(app, name='Ramadan', template_mode='bootstrap3', url='/adminpanel'
 
 # Configs
 app.config['SECRET_KEY'] = 'sekretcha'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join('.') + '/database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join('..') + '/database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
 
@@ -48,7 +48,16 @@ class Day(db.Model):
     iftorlik = db.Column(db.DateTime)
 
     def __str__(self):
-        return f"{self.name}"
+        return f"{self.day}"
+
+
+class User(db.Model):
+    __tablename__ = 'users'
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer)
+
+    def __str__(self):
+        return f"{self.user_id}"
 
 
 def get_data(data=None):
