@@ -140,7 +140,7 @@ bot.remove_webhook()
 time.sleep(0.1)
 
 # Set webhook
-bot.set_webhook(url='https://amurodov2005.pythonanywhere.com/1721163869:AAGwE_mvTiwzITGsYK9najKI2U2yKLv5MHY')
+bot.set_webhook(url='URL FOR WEBHOOK')
 
 if __name__ == "__main__":
-    app.run(debug=True, host='https://amurodov2005.pythonanywhere.com/')
+    app.run(debug=True, host='URL')
